@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>events homework</title>
+    <style>
+        .main {
+            display: flex;
+            justify-content: center;
+
+
+        }
+
+        .card {
+
+            text-align: center;
+            width: 250px;
+            height: auto;
+            background-color: white;
+            border-radius: 28px;
+            box-shadow: rgb(168, 151, 151) 0px 0px 5px 5px;
+            border: 0.5px solid rgb(170, 160, 160);
+            margin-top: 80px;
+
+        }
+        .card:hover{
+            box-shadow: rgb(226, 221, 221) 0px 0px 5px 5px;
+
+        }
+
+        .img {
+            width: 190px;
+            height: 150px;
+            border: black solid 0.5px;
+            margin-top: 20px;
+
+        }
+
+        
+        .card-text {
+            font-family: 'Bree Serif', serif;
+            font-size: 30px;
+            padding: 0px;
+            color: black;
+        }
+
+        .card-btn {
+
+            padding: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+
+        }
+
+        .card-btn button {
+            border: 1px solid black;
+            border-radius: 2px;
+            width: 150px;
+            font-size: 20px;
+            padding: 10px;
+            background-color: #ac174b;
+            box-shadow: #ada194 0px 0px 0px 0px;
+            border-radius: 30px;
+            color: white;
+        }
+        .card-btn button:hover{
+            background-color: #da4378;
+            cursor: pointer;
+            
+
+        }
+
+        .event {
+            display: flex;
+            justify-content: space-evenly;
+            height: 35px;
+        }
+        
+    </style>
+
+    <script>
+        let count = 0;
+
+        function inc() {
+            count++;
+            document.getElementById("counter").innerHTML = count;
+        }
+
+        function dec() {
+            count--;
+            document.getElementById("counter").innerHTML = count;
+        }
+
+        function reset() {
+            count = 0;
+            document.getElementById("counter").innerHTML = count;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="card">
+            <img src="./triangle-necklace.jpg" alt="watch img" class="img">
+            <h1 style="color: #ac174b">Trio Necklace</h1>
+            <p>Korean Golden <br> Necklace Set</p>
+            <h2>500 Rs</h2>
+            <p>⭐⭐⭐⭐⭐</p>
+
+            <div class="event">
+                <img src="./plus.png" onclick="inc()">
+                <h1 id="counter" style="margin-top: 0px;">0</h1>
+                <img src="./minus.png" onclick="dec()">
+                
+              
+            </div>
+
+            <div class="card-btn">
+                <button class="btn">Buy Now</button>
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+</body>
+
+</html>
